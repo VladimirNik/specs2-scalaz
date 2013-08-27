@@ -5,7 +5,7 @@ version := "6.0.1"
 
 organization := "org.specs2"
 
-scalaVersion := "2.10.0-M3"
+scalaVersion := "2.10.2"
 
 /** Shell */
 shellPrompt := { state => System.getProperty("user.name") + "> " }
@@ -20,6 +20,10 @@ resolvers ++= Seq("releases" at "http://oss.sonatype.org/content/repositories/re
 javacOptions ++= Seq("-Xmx1812m", "-Xms512m", "-Xss4m")
 
 javaOptions += "-Xmx2G"
+
+libraryDependencies += compilerPlugin("test.org" % "printplugin_2.10" % "1.0")
+
+scalacOptions += "-P:printplugin:oversrc"
 
 scalacOptions += "-deprecation"
 
