@@ -25,6 +25,10 @@ scalacOptions += "-deprecation"
 
 scalacOptions += "-unchecked"
 
+libraryDependencies += compilerPlugin("test.org" % "printplugin_2.10" % "1.0")
+
+scalacOptions += "-P:printplugin:oversrc"
+
 maxErrors := 20 
 
 pollInterval := 1000
