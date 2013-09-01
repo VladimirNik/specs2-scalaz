@@ -21,10 +21,6 @@ javacOptions ++= Seq("-Xmx1812m", "-Xms512m", "-Xss4m")
 
 javaOptions += "-Xmx2G"
 
-libraryDependencies += compilerPlugin("test.org" % "printplugin_2.10" % "1.0")
-
-scalacOptions += "-P:printplugin:oversrc"
-
 scalacOptions += "-deprecation"
 
 scalacOptions += "-unchecked"
